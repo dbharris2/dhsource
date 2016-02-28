@@ -52,8 +52,7 @@ def is_valid_char(c):
 	return True
 
 def hash_dictionary():
-	#f = open("/etc/dictionaries-common/words", "r")
-	f = open("/home/devon/Downloads/enable1.txt", "r")
+	f = open("dictionary.txt", "r")
 	for line in f.readlines():
 		word = ""
 		for letter in line:
