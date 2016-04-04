@@ -2,7 +2,7 @@ CC = gcc
 CFLAGS = -I.
 
 DEPS = DHString.h
-OBJ = DHString.o DHStringSizeTests.o AllTests.o CuTest.o CuTestTest.o
+OBJ = DHString.o DHStringReverseTests.o DHStringSizeTests.o AllTests.o CuTest.o CuTestTest.o
 
 %.o: %.c $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)

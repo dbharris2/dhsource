@@ -8,7 +8,6 @@ void TestSizeWithNullString(CuTest *tc) {
   void *actual = string;
   void *expected = NULL;
   CuAssertPtrEquals(tc, expected, actual);
-  dhstring_free(string);
 }
 
 void TestSizeWithEmptyString(CuTest *tc) {
