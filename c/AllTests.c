@@ -2,16 +2,13 @@
 
 #include "CuTest.h"
 
-CuSuite* CuGetSuite();
-CuSuite* CuStringGetSuite();
+CuSuite* DHStringSizeGetSuite();
 
-void RunAllTests(void)
-{
+void RunAllTests(void) {
 	CuString *output = CuStringNew();
 	CuSuite* suite = CuSuiteNew();
 
-	CuSuiteAddSuite(suite, CuGetSuite());
-	CuSuiteAddSuite(suite, CuStringGetSuite());
+	CuSuiteAddSuite(suite, DHStringSizeGetSuite());
 
 	CuSuiteRun(suite);
 	CuSuiteSummary(suite, output);
@@ -19,7 +16,6 @@ void RunAllTests(void)
 	printf("%s\n", output->buffer);
 }
 
-int main(void)
-{
+int main(void) {
 	RunAllTests();
 }
