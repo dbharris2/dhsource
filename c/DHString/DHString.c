@@ -18,6 +18,14 @@ bool _string_is_null(DHString *string) {
 
 // Public API
 
+DHString *dhstring_copy(DHString *string) {
+  if (string == NULL) {
+    return NULL;
+  } else {
+    return dhstring_new(string->characters);
+  }
+}
+
 void dhstring_free(DHString *string) {
   free(string);
 }
