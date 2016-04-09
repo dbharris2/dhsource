@@ -1,6 +1,9 @@
+#include <stdbool.h>
+
 struct _DHString;
 typedef struct _DHString DHString;
 
+bool dhstring_contains(DHString *string, DHString *otherString);
 DHString *dhstring_copy(DHString *string);
 void dhstring_free(DHString *string);
 DHString *dhstring_new(const char *string);

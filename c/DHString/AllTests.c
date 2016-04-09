@@ -2,6 +2,7 @@
 
 #include "CuTest.h"
 
+CuSuite* DHStringContainsGetSuite();
 CuSuite* DHStringCopyGetSuite();
 CuSuite* DHStringReverseGetSuite();
 CuSuite* DHStringSizeGetSuite();
@@ -10,6 +11,7 @@ void RunAllTests(void) {
 	CuString *output = CuStringNew();
 	CuSuite* suite = CuSuiteNew();
 
+  CuSuiteAddSuite(suite, DHStringContainsGetSuite());
   CuSuiteAddSuite(suite, DHStringCopyGetSuite());
 	CuSuiteAddSuite(suite, DHStringReverseGetSuite());
 	CuSuiteAddSuite(suite, DHStringSizeGetSuite());
