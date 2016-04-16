@@ -81,6 +81,14 @@ void dhstring_free(DHString *string) {
   free(string);
 }
 
+bool dhstring_is_equal_to_string(DHString *string, DHString *otherString) {
+  if (_string_is_null(string) || _string_is_null(otherString)) {
+    return false;
+  } else {
+    return strcmp(string->characters, otherString->characters) == 0;  
+  }
+}
+
 DHString *dhstring_new(const char *string) {
   if (string == NULL) {
     return NULL;

@@ -4,6 +4,7 @@
 
 CuSuite* DHStringContainsGetSuite();
 CuSuite* DHStringCopyGetSuite();
+CuSuite* DHStringEqualsGetSuite();
 CuSuite* DHStringReverseGetSuite();
 CuSuite* DHStringSizeGetSuite();
 
@@ -13,6 +14,7 @@ void RunAllTests(void) {
 
   CuSuiteAddSuite(suite, DHStringContainsGetSuite());
   CuSuiteAddSuite(suite, DHStringCopyGetSuite());
+	CuSuiteAddSuite(suite, DHStringEqualsGetSuite());
 	CuSuiteAddSuite(suite, DHStringReverseGetSuite());
 	CuSuiteAddSuite(suite, DHStringSizeGetSuite());
 
